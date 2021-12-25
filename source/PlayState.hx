@@ -1618,7 +1618,14 @@ class PlayState extends MusicBeatState
 	function skipDialogue() {
 		callOnLuas('onSkipDialogue', [dialogueCount]);
 	}
-
+    
+    creditTxt = new FlxText(876, 648, 348);
+        creditTxt.text = 'PORTED BY\n[FAR123]ツ';
+                creditTxt.setFormat(Paths.font("vcr.ttf"), 30, FlxColor.WHITE, RIGHT);
+                        creditTxt.setBorderStyle(OUTLINE, FlxColor.BLACK, 3, 1);       
+                                creditTxt.scrollFactor.set();
+                                        add(creditTxt);
+    
 	var previousFrameTime:Int = 0;
 	var lastReportedPlayheadPosition:Int = 0;
 	var songTime:Float = 0;
